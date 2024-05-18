@@ -2,124 +2,90 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Stara Strona Internetowa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona</title>
     <style>
         body {
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/13/BranMoviC_Hakken.gif');
-            background-repeat: no-repeat;
-            background-size: cover;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            color: white;
-            cursor: url(http://www.rw-designer.com/cursor-view/76990.png), auto;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
-        .centered-box {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px 0;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .logo {
-            width: 300px;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-        }
-        .map-container {
-            width: 500px;
-            height: auto;
-            margin: 20px auto;
-            border-radius: 10px;
-            overflow: hidden;
-            user-select: none;
-            position: relative;
-        }
-        .map {
-            width: 100%;
-            display: block;
-        }
-        .icon {
-            width: 50px;
-            height: auto;
-            margin: 10px;
-            user-select: none;
-            pointer-events: none;
-        }
-        .email {
-            margin-top: 50px;
-            font-size: 14px;
-        }
-        .vote-section {
-            margin: 20px auto;
-            text-align: center;
-        }
-        .vote-button {
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .vote-button:active {
-            background-color: #0056b3;
-        }
-        .vote-option {
-            display: inline-block;
-            margin: 5px;
-        }
-        .icon-container {
+        
+        .background {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/13/BranMoviC_Hakken.gif');
+            background-size: cover;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-    </style>
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        function submitVote() {
-            alert("Dziękuję za informację");
+        
+        .tile {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-    </script>
+        
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        
+        .image {
+            margin-top: 20px;
+            width: 250px;
+            height: auto;
+        }
+        
+        .gifs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .gif {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        
+        .ankieta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .email {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <a href="index.html">
-        <img src="https://media.discordapp.net/attachments/1132802973685268544/1187146132200108082/image.png?ex=664a707e&is=66491efe&hm=aed710df84ae603b04fe3630c276fb17ce97367259bcbea3f182ace3608a6c92&=&format=webp&quality=lossless" alt="Logo" class="logo">
-    </a>
-    <div class="centered-box">
-        <div class="map-container">
-            <img src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Mapa" class="map">
+    <div class="background">
+        <div class="tile">
+            <img class="logo" src="https://media.discordapp.net/attachments/1132802973685268544/1187146132200108082/image.png?ex=664a707e&is=66491efe&hm=aed710df84ae603b04fe3630c276fb17ce97367259bcbea3f182ace3608a6c92&=&format=webp&quality=lossless" alt="Logo">
+            <img class="image" src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Obrazek">
+            <div class="gifs">
+                <a href="https://A.PL" target="_blank"><img class="gif" src="https://r76.cooltext.com/rendered/cooltext458614050592997.gif" alt="GIF 1"></a>
+                <a href="https://B.PL" target="_blank"><img class="gif" src="https://r72.cooltext.com/rendered/cooltext458611644964685.gif" alt="GIF 2"></a>
+            </div>
+            <div class="ankieta">
+                <p>Wybierz 1 lub 2:</p>
+                <input type="radio" id="wybor1" name="wybor" value="1">
+                <label for="wybor1">1</label>
+                <input type="radio" id="wybor2" name="wybor" value="2">
+                <label for="wybor2">2</label>
+                <br><br>
+                <button>Zatwierdź</button>
+            </div>
+            <div class="email">
+                <p>Kontakt: example@example.com</p>
+            </div>
         </div>
-        <div class="vote-section">
-            <p>Wybierz swoją drużynę:</p>
-            <label class="vote-option">
-                <input type="radio" name="team" value="Lech"> Lech
-            </label>
-            <label class="vote-option">
-                <input type="radio" name="team" value="Legia"> Legia
-            </label>
-            <br>
-            <button class="vote-button" onclick="submitVote()">Zatwierdź</button>
-        </div>
-        <div class="icon-container">
-            <a href="https://r73.cooltext.com/rendered/cooltext458611647126363.gif" class="icon" target="_blank">
-                <img src="https://r73.cooltext.com/rendered/cooltext458611647126363.gif" alt="Instagram" class="icon">
-            </a>
-            <a href="https://r73.cooltext.com/rendered/cooltext458611641643664.gif" class="icon" target="_blank">
-                <img src="https://r73.cooltext.com/rendered/cooltext458611641643664.gif" alt="Telegram" class="icon">
-            </a>
-        </div>
-    </div>
-    <div class="email">
-        <p>Kontakt: <a href="mailto:gowno@gowno.pl" style="color: white;">gowno@gowno.pl</a></p>
     </div>
 </body>
 </html>
