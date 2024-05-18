@@ -70,6 +70,10 @@
         .vote-button:active {
             background-color: #0056b3;
         }
+        .vote-option {
+            display: inline-block;
+            margin: 5px;
+        }
     </style>
     <script>
         document.addEventListener('contextmenu', function(e) {
@@ -91,25 +95,24 @@
         </div>
         <div class="vote-section">
             <p>Wybierz swoją drużynę:</p>
-            <label>
+            <label class="vote-option">
                 <input type="radio" name="team" value="Lech"> Lech
             </label>
-            <label>
+            <label class="vote-option">
                 <input type="radio" name="team" value="Legia"> Legia
             </label>
             <br>
             <button class="vote-button" onclick="submitVote()">Zatwierdź</button>
         </div>
-        <br>
-        <a href="https://www.instagram.com">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" class="icon">
+        <a href="https://www.instagram.com" class="icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
         </a>
-        <a href="https://telegram.org">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png" alt="Telegram" class="icon">
+        <a href="https://telegram.org" class="icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png" alt="Telegram">
         </a>
     </div>
     <div class="email">
-        <p>Kontakt: <a href="mailto:gowno@gowno.pl" style="color: white;">gowno@gowno.pla</a></p>
+        <p>Kontakt: <a href="mailto:gowno@gowno.pl" style="color: white;">gowno@gowno.pl</a></p>
     </div>
 </body>
 </html>
