@@ -41,7 +41,6 @@
         }
         .map {
             width: 100%;
-            transition: transform 0.3s ease;
             display: block;
         }
         .icon {
@@ -55,7 +54,11 @@
             margin-top: 50px;
             font-size: 14px;
         }
-        .zoom-button {
+        .vote-section {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .vote-button {
             padding: 10px 20px;
             margin: 10px;
             background-color: #007bff;
@@ -64,7 +67,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .zoom-button:active {
+        .vote-button:active {
             background-color: #0056b3;
         }
     </style>
@@ -73,13 +76,8 @@
             e.preventDefault();
         });
 
-        function zoomMap() {
-            var map = document.querySelector('.map');
-            if (map.style.transform === 'scale(1.5)') {
-                map.style.transform = 'scale(1)';
-            } else {
-                map.style.transform = 'scale(1.5)';
-            }
+        function submitVote() {
+            alert("Dziękuję za informację");
         }
     </script>
 </head>
@@ -91,7 +89,17 @@
         <div class="map-container">
             <img src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Mapa" class="map">
         </div>
-        <button class="zoom-button" onclick="zoomMap()">Przybliż mapę</button>
+        <div class="vote-section">
+            <p>Wybierz swoją drużynę:</p>
+            <label>
+                <input type="radio" name="team" value="Lech"> Lech
+            </label>
+            <label>
+                <input type="radio" name="team" value="Legia"> Legia
+            </label>
+            <br>
+            <button class="vote-button" onclick="submitVote()">Zatwierdź</button>
+        </div>
         <br>
         <a href="https://www.instagram.com">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" class="icon">
