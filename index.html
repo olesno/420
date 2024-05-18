@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>jebalnia</title>
+    <title>Stara Strona Internetowa</title>
     <style>
         body {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/13/BranMoviC_Hakken.gif');
@@ -12,37 +12,47 @@
             font-family: Arial, sans-serif;
             color: white;
             cursor: url('https://cur.cursors-4u.net/nature/images2/nat120.gif'), auto;
+            margin: 0;
+            padding: 0;
         }
         .centered-box {
-            width: 350px;
-            margin: 100px auto;
+            width: 100%;
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
+            padding: 20px 0;
+            box-sizing: border-box;
         }
         .logo {
-            width: 150px;
+            width: 300px;
             height: auto;
             display: block;
             margin: 20px auto;
         }
         .map {
-            width: 300px;
+            width: 500px;
             height: auto;
             display: block;
             margin: 20px auto;
             border-radius: 10px;
+            user-select: none;
+            pointer-events: none;
         }
         .icon {
             width: 50px;
             height: auto;
             margin: 10px;
+            user-select: none;
+            pointer-events: none;
         }
         .email {
             margin-top: 50px;
             font-size: 14px;
         }
     </style>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
 </head>
 <body>
     <a href="index.html">
@@ -62,5 +72,4 @@
         <p>Kontakt: <a href="mailto:gowno@gowno.pl" style="color: white;">gowno@gowno.pl</a></p>
     </div>
 </body>
-    
 </html>
