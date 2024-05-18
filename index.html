@@ -27,14 +27,24 @@
             display: block;
             margin: 20px auto;
         }
-        .map {
+        .map-container {
             width: 500px;
             height: auto;
-            display: block;
             margin: 20px auto;
             border-radius: 10px;
+            overflow: hidden;
             user-select: none;
-            pointer-events: none;
+            position: relative;
+        }
+        .map {
+            width: 100%;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+            display: block;
+        }
+        .map:hover {
+            transform: scale(1.5);
+            cursor: zoom-out;
         }
         .icon {
             width: 50px;
@@ -59,7 +69,9 @@
         <img src="https://media.discordapp.net/attachments/1132802973685268544/1187146132200108082/image.png?ex=664a707e&is=66491efe&hm=aed710df84ae603b04fe3630c276fb17ce97367259bcbea3f182ace3608a6c92&=&format=webp&quality=lossless" alt="Logo" class="logo">
     </a>
     <div class="centered-box">
-        <img src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Mapa" class="map">
+        <div class="map-container">
+            <img src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Mapa" class="map">
+        </div>
         <br>
         <a href="https://www.instagram.com">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" class="icon">
@@ -71,5 +83,6 @@
     <div class="email">
         <p>Kontakt: <a href="mailto:gowno@gowno.pl" style="color: white;">gowno@gowno.pl</a></p>
     </div>
+    //PIESKU JEBANY CO TO CZYTA JEBAC CIE
 </body>
 </html>
