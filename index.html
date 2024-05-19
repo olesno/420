@@ -3,89 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona</title>
+    <title>Losowy Kursor</title>
     <style>
         body {
+            /* Styl domyślny dla strony */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        
-        .background {
+            height: 100vh;
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/13/BranMoviC_Hakken.gif');
             background-size: cover;
-            height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .tile {
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
         }
-        
         .logo {
+            margin-top: 20px;
+        }
+        .bottom-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .bottom-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .bottom-links img {
             width: 150px;
             height: auto;
         }
-        
-        .image {
-            margin-top: 20px;
-            width: 250px;
-            height: auto;
+        h1 {
+            font-size: 3em;
+            margin: 20px 0 0 0;
+            font-family: 'Courier New', monospace;
         }
-        
-        .gifs {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .gif {
-            margin: 0 10px;
-            cursor: pointer;
-        }
-        
-        .ankieta {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .email {
-            text-align: center;
-            margin-top: 20px;
+        p {
+            font-size: 0.8em;
+            margin: 10px 0 0 0;
+            font-family: 'Courier New', monospace;
         }
     </style>
 </head>
 <body>
-    <div class="background">
-        <div class="tile">
-            <img class="logo" src="https://media.discordapp.net/attachments/1132802973685268544/1187146132200108082/image.png?ex=664a707e&is=66491efe&hm=aed710df84ae603b04fe3630c276fb17ce97367259bcbea3f182ace3608a6c92&=&format=webp&quality=lossless" alt="Logo">
-            <img class="image" src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Obrazek">
-            <div class="gifs">
-                <a href="https://A.PL" target="_blank"><img class="gif" src="https://r76.cooltext.com/rendered/cooltext458614050592997.gif" alt="GIF 1"></a>
-                <a href="https://B.PL" target="_blank"><img class="gif" src="https://r72.cooltext.com/rendered/cooltext458611644964685.gif" alt="GIF 2"></a>
-            </div>
-            <div class="ankieta">
-                <p>Wybierz 1 lub 2:</p>
-                <input type="radio" id="wybor1" name="wybor" value="1">
-                <label for="wybor1">1</label>
-                <input type="radio" id="wybor2" name="wybor" value="2">
-                <label for="wybor2">2</label>
-                <br><br>
-                <button>Zatwierdź</button>
-            </div>
-            <div class="email">
-                <p>Kontakt: example@example.com</p>
-            </div>
-        </div>
+
+<img src="https://r74.cooltext.com/rendered/cooltext458616944978343.gif" alt="Logo" class="logo">
+<img src="https://media.discordapp.net/attachments/1132802973685268544/1186693077520351243/image.png?ex=664a1c0d&is=6648ca8d&hm=d47c7b1fbd447d6dade2f0fabc294a9eea61edc66b8f64792a16fc98d4d4cca0&=&format=webp&quality=lossless&width=483&height=649" alt="Witaj" class="welcome-image">
+
+<div class="bottom-content">
+    <div class="bottom-links">
+        <a href="https://r73.cooltext.com/rendered/cooltext458616902194574.gif" target="_blank">
+            <img src="https://r73.cooltext.com/rendered/cooltext458616902194574.gif" alt="Link 1">
+        </a>
+        <a href="https://r73.cooltext.com/rendered/cooltext458616999332777.gif" target="_blank">
+            <img src="https://r73.cooltext.com/rendered/cooltext458616999332777.gif" alt="Link 2">
+        </a>
     </div>
+    <p>olesno@420blaze.it</p>
+</div>
+
+<script>
+    const cursors = [
+        "https://cur.cursors-4u.net/nature/nat-2/nat120.cur",
+        "https://cur.cursors-4u.net/anime/ani-10/ani931.cur",
+        "https://cur.cursors-4u.net/anime/ani-1/ani178.cur",
+        "https://cur.cursors-4u.net/anime/ani-1/ani4.cur"
+    ];
+    function setRandomCursor() {
+        const randomIndex = Math.floor(Math.random() * cursors.length);
+        const randomCursor = cursors[randomIndex];
+        document.body.style.cursor = `url(${randomCursor}), auto`;
+    }
+
+    window.onload = setRandomCursor;
+</script>
+
 </body>
 </html>
